@@ -42,12 +42,16 @@ import org.jdom.Element;
 public class GSFeatureTypeEncoder extends GSResourceEncoder {
 
     public final static String ATTRIBUTES = "attributes";
-
     final private Element attributes = new Element(ATTRIBUTES);
+
+    public final static String CQL_FILTER = "cqlFilter";
+    final private Element cqlFilter = new Element(CQL_FILTER);
+
 
     public GSFeatureTypeEncoder() {
         super("featureType");
         addContent(attributes);
+        addContent(cqlFilter);
     }
 
 
@@ -126,6 +130,15 @@ public class GSFeatureTypeEncoder extends GSResourceEncoder {
     public void setAttribute(GSAttributeEncoder attribute) {
         delAttribute(attribute.getAttribute(FeatureTypeAttribute.name));
         addAttribute(attribute);
+    }
+
+    /**
+     *
+     *
+     * @param cqlFilter
+     */
+    public void setCqlFilter(final String cqlFilter) {
+        set("cqlFilter", cqlFilter);
     }
     
 }
