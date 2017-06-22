@@ -35,7 +35,7 @@ import java.math.BigDecimal;
  * @author Simone Giannecchini, GeoSolutions
  *
  */
-public class GSDimensionInfoEncoder extends XmlElement{
+public class GSDimensionInfoEncoder extends XmlElement {
 	public final static String DIMENSIONINFO="dimensionInfo";
 	
 	public final static String RESOLUTION="resolution";
